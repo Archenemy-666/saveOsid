@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "saveo"
+  "defaultProject": "saveo",
+  "cli": {
+    "analytics": "cf983289-ffb0-4f86-ac7e-21c79d1b8ad4"
+  }
 }

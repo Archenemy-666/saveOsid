@@ -1,0 +1,15 @@
+<p>small-scale-register works!</p>
+<h1 align="center">Small-Scale Hospital Registration</h1>
+<form #smallScaleRegForm = "ngForm" (ngSubmit) = "registerSmallScale(smallScaleRegForm.value)">
+    <div align="center">
+        <input type="text" placeholder="Small-Scale-Name" name = "smallScaleName" ngModel><br/>
+        <input type="text" placeholder="Small-Scale-Id" name = "smallScaleId" ngModel><br/>
+        <input type="text" placeholder="Location" name = "location" ngModel><br/>
+        <input type="number" placeholder="contact" name = "contact" ngModel><br/>
+        <input type="text" placeholder="EmailId" name = "emailId" ngModel><br/>
+        
+        <input type="password" placeholder="password" name = "password" ngModel><br/>
+        <button>Register</button>
+
+    </div>
+</form>

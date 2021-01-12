@@ -1,0 +1,9 @@
+<p>small-scale-login works!</p>
+<h1 align="center">Small-Scale Hospital Login</h1>
+<form #smallScaleLoginForm = "ngForm" (ngSubmit) = "SubmitSmallScaleDetails(smallScaleLoginForm.value)">
+    <div align="center">
+        <input type="text" placeholder="Small-Scale-Hospital-Id" name = "smallScaleId" ngModel><br/>
+        <input type="password" placeholder="password" name = "password" ngModel><br/>
+        <button> Login</button><br/>
+    </div>
+</form>
