@@ -10,8 +10,14 @@ import { SmallScaleLoginComponent } from './small-scale-login/small-scale-login.
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
-const appRoot: Routes=[{path:'corporateRegister',component:CorporateRegisterComponent}];
+const appRoot: Routes=[{path:'',component:CorporateRegisterComponent},
+{path:'corporateRegister',component:CorporateRegisterComponent},
+{path:'corporateLogin',component:CorporateLoginComponent},
+{path:'smallScaleRegister',component:SmallScaleRegisterComponent},
+{path:'smallScaleLogin',component:SmallScaleLoginComponent}
+];
 
 
 @NgModule({
@@ -20,7 +26,8 @@ const appRoot: Routes=[{path:'corporateRegister',component:CorporateRegisterComp
     CorporateRegisterComponent,
     CorporateLoginComponent,
     SmallScaleRegisterComponent,
-    SmallScaleLoginComponent
+    SmallScaleLoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
