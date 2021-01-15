@@ -8,18 +8,16 @@ import { CorporateServiceService } from '../corporate-service.service';
 })
 export class CorporateLoginComponent implements OnInit {
 
-  data:any;
   corporate:any;
-  status:any;
+
   constructor(public corporateService:CorporateServiceService) {
 
-   this.status={corporateName:'',corporateId:'',location:'',contact:'',emailId:'',established:'',password:''};
    }
 
   ngOnInit(): void {
   }
   async SubmitCorporateDetails(corporateLoginForm:any){
-    await this.corporateService.corporateLoginAuthentication(corporateLoginForm.corporateId,corporateLoginForm.password).subscribe((data:any) =>{this.corporate=data; console.log(data); });
+    await this.corporateService.corporateLoginAuthentication(corporateLoginForm.corporateId,corporateLoginForm.password).toPromise().then((data:any) =>{this.corporate=data; console.log(data); });
       if(this.corporate != null){
         return alert("successful");
       }

@@ -11,11 +11,15 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { SmallScaleHomeComponent } from './small-scale-home/small-scale-home.component';
+import { RequestFormComponent } from './request-form/request-form.component';
 
 const appRoot: Routes=[{path:'',component:CorporateRegisterComponent},
 {path:'corporateRegister',component:CorporateRegisterComponent},
 {path:'corporateLogin',component:CorporateLoginComponent},
 {path:'smallScaleRegister',component:SmallScaleRegisterComponent},
+{path:'smallScaleHome',component:SmallScaleHomeComponent},
+{path:'requestForm',component:RequestFormComponent},
 {path:'smallScaleLogin',component:SmallScaleLoginComponent}
 ];
 
@@ -27,7 +31,9 @@ const appRoot: Routes=[{path:'',component:CorporateRegisterComponent},
     CorporateLoginComponent,
     SmallScaleRegisterComponent,
     SmallScaleLoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    SmallScaleHomeComponent,
+    RequestFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SmallScaleService } from '../small-scale.service';
 
 @Component({
@@ -8,7 +9,8 @@ import { SmallScaleService } from '../small-scale.service';
 })
 export class SmallScaleLoginComponent implements OnInit {
   smallScale:any;
-  constructor(public smallScaleService:SmallScaleService) {
+  static smallName : any;
+  constructor(public router:Router ,public smallScaleService:SmallScaleService) {
 
   }
 
@@ -17,6 +19,8 @@ export class SmallScaleLoginComponent implements OnInit {
   async SubmitSmallScaleDetails(smallScaleLoginForm: any){
     await this.smallScaleService.smallScaleLoginAuthentication(smallScaleLoginForm.smallScaleId,smallScaleLoginForm.password).toPromise().then((data:any) =>{this.smallScale=data; console.log(data); });
       if(this.smallScale != null){
+        SmallScaleLoginComponent.smallName = this.smallScale.smallScaleName ;
+        this.router.navigate(['smallScaleHome']);
         return alert("successful");
       }
       return alert("unsuccessful");

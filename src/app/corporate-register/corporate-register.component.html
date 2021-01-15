@@ -1,5 +1,5 @@
 
-<h1 align="center">Corporate Registration</h1>
+<!-- <h1 align="center">Corporate Registration</h1>
 <form #corporateRegForm="ngForm" (ngSubmit)="registerCorporate(corporateRegForm.value)">
     <div align="center">
         <input type="text" placeholder="Corporate-Name" name="corporateName" ngModel><br/>
@@ -11,69 +11,111 @@
         <input type="password" placeholder="password" name = "password" ngModel><br/>
         <button value="reset">Register</button>
     </div> 
-</form>
-<!-- 
+</form> -->
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
-</head>
-	<div class="page-body">
-            <div class="auth-form-wrapper register-form-wrapper">
-                <form #regForm="ngForm" (ngSubmit)="registerUser(regForm.value)">
-                    <input type="hidden" name="_token" value="UCRvE8ogNi0xO8aHnKs3mFR9YxJLQ3JPObJIfSez">
-                    <div class="form-header">
-                        <h2 class="text-center">Register</h2>
-                    </div>
+</head>   
+<div class="navbar">
+    <a href="#">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Corporate
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a routerLink = "../corporateRegister">CorporateRegister</a>
+        <a routerLink = "../corporateLogin">CorporateLogin</a>
+      </div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn">SmallScale
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a routerLink = "../smallScaleRegister">SmallScaleRegister</a>
+		  <a routerLink = "../smallScaleLogin">SmallScaleLogin</a>
+		</div>
+	  </div>
+  </div>
 
-                    <div class="form-row">
-                        <div class="input-wrapper">
-                            <input id="name" type="text" class="" name="name" value="" required="" autofocus="">
-                            <label for="name">corporateName</label>
-                            <span class="icon-wrapper bg-primary">
-                                <i class="fas fa-user"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="input-wrapper">
-                            <input id="email" type="email" class="" name="email" value="" required="">
-                            <label for="name">Email</label>
-                            <span class="icon-wrapper bg-primary">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="input-wrapper">
-                            <input id="password" type="password" class="" name="password" required="">
-                            <label for="name">Password</label>
-                            <span class="icon-wrapper bg-primary">
-                                <i class="fas fa-lock"></i>
-                            </span>
-						</div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="input-wrapper">
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
-                            <label for="name">Confirm password</label>
-                            <span class="icon-wrapper bg-primary">
-                                <i class="fas fa-lock"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <p class="note">By clicking 'Sign up' agree to our <span>Terms</span>.</p>
-
-                    <div class="form-action">
-                        <div>
-                            <button type="submit" class="btn btn-primary">
-                                Register
-                            </button>
-                        </div>
-                    </div>
-                </form>
+  
+<body>
+<div class="page-body" >
+    <div class="auth-form-wrapper register-form-wrapper">
+        <form #corporateRegForm="ngForm" (ngSubmit)="  registerCorporate(corporateRegForm.value)">
+        
+            <div class="form-header">
+                <h2 class="text-center">Corporate Register</h2>
             </div>
-        </div> -->
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="corporateName" type="text" class="" name="corporateName" ngModel value="" required="" autofocus="">
+                    <label for="corporateName">corporateName</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="corporateId" type="text" class="" name="corporateId" ngModel value="" required="" autofocus="">
+                    <label for="corporateId">Corporate HospitalId</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="location" type="text" class="" name="location" ngModel value="" required="" autofocus="">
+                    <label for="location">Location</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="contact" type="number" class="" name="contact" ngModel value="" required="" autofocus="">
+                    <label for="contact">contact</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="emailId" type="text" class="" name="emailId" ngModel value="" required="" autofocus="">
+                    <label for="emailId">EmailId</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input id="password" type="password" class="" name="password" ngModel value="" required="" autofocus="">
+                    <label for="password">Password</label>
+                    <span class="icon-wrapper bg-primary">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="form-action">
+                <div>
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 
+</body>
